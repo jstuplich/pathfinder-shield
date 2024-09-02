@@ -8,11 +8,26 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
-   keymap {
-        compatible = "zmk,keymap";
+&lt {
+        tapping-term-ms = <300>;
+};
 
-        default_layer {
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_game {
+            timeout-ms = <50>;
+            key-positions = <0 5>;
+            bindings = <&tog 3>;
+        };
+    };
+};
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |                        |  6  |  7   |  8  |  9  |  0  | BKSP |
 // |  TAB |  Q  |  W  |  E  |  R  |  T  | PG_UP |        | HOME  |  Y  |  U   |  I  |  O  |  P  |  |   |
