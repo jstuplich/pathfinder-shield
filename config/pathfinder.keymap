@@ -22,7 +22,12 @@
 
         CloseApp {
             bindings = <&kp LA(F4)>;
-            key-positions = <4 56 40>;
+            key-positions = <4 56>;
+        };
+
+        AltTab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <56 12>;
         };
     };
 };
